@@ -82,10 +82,10 @@ keymap {
                         // | |   ~   | |  !  | |  @  | |  #  | |  #  | |  $  |                |  ^  | |  &  | |  *  | |  (  | |  )  | |  BCK  | |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
-                        // | |  BCK  | |  _  | |  =  | |  {  | |  }  | |  |  |                |     | |     | |     | |  {  | |  }  | |       | |
+                        // | |  BCK  | |  _  | |  =  | |  {  | |  }  | |  |  |                |  -  | |  =  | |     | |  {  | |  }  | |       | |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
-                        // | |   {   | |     | |     | |  ( | |   )  | |     |                |     | |     | |     | |  [  | |  ]  | |   }   | |
+                        // | |   {   | |     | |     | |  ( | |   )  | |     |                |  _  | |  +  | |     | |  [  | |  ]  | |   }   | |
                         // |  -------   -----   -----   -----   -----   -----       ----       -----   -----   -----   -----   -----   -------  |
                         // |                                    -----   -----       ----       -----   -----                                    |
                         // |                                   |     | |     |     |    |     | SPC | |     |                                   |
@@ -93,8 +93,8 @@ keymap {
                         // ----------------------------------------------------------------------------------------------------------------------
                         
                         &kp TILDE       &kp EXCL    &kp AT      &kp HASH   &kp DLLR   &kp PRCNT           &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR   &trans
-                        &kp BACKSPACE   &kp UNDER   &kp EQUAL   &kp LBRC   &kp RBRC   &kp PIPE            &none       &none      &none      &kp LBRC   &kp RBRC   &none
-                        &kp LBRC        &none       &none       &kp LPAR   &kp RPAR   &none               &none       &none      &none      &kp LBKT   &kp RBKT   &kp RBRC      
+                        &kp BACKSPACE   &kp UNDER   &kp EQUAL   &kp LBRC   &kp RBRC   &kp PIPE            &kp MINUS   &kp EQUAL  &none      &kp LBRC   &kp RBRC   &none
+                        &kp LBRC        &none       &none       &kp LPAR   &kp RPAR   &none               &kp UNDER   &kp PLUS   &none      &kp LBKT   &kp RBKT   &kp RBRC      
                                                                               &none   &none       &none   &trans      &none 
                         >;         
                 };
