@@ -37,7 +37,7 @@ keymap {
                         // | |CTRLDEL| |  A  | |  S  | |  D  | |  F  | |  G  |                   |  H  | |  J  | |  K  | |  L  | |  :  | | ALT ' | |
                         // |  -------   -----   -----   -----   -----   -----                     -----   -----   -----   -----   -----   -------  |
                         // |  -------   -----   -----   -----   -----   -----                     -----   -----   -----   -----   -----   -------  |
-                        // | | SFT ( | |  Z  | |  X  | |  C  | |  V  | |  B  |                   |  N  | |  M  | |  ,  | |  .  | |  /  | | SFT ) | |
+                        // | | LSHFT | |  Z  | |  X  | |  C  | |  V  | |  B  |                   |  N  | |  M  | |  ,  | |  .  | |  /  | | RSHFT | |
                         // |  -------   -----   -----   -----   -----   -----                     -----   -----   -----   -----   -----   -------  |
                         // |                          ------------   ----------     ---------     ---------   ---------                            |
                         // |                         | _NUM GRAVE | | _NAV ENT |   | GUI ESC |   | SPACE   | | _SYM DEL|                           |
@@ -46,7 +46,7 @@ keymap {
 
                         &kp TAB          &kp Q   &kp W   &kp E      &kp R    &kp T                    &kp Y       &kp U      &kp I       &kp O     &kp P      &kp BACKSPACE
                         &mt LCTRL DEL    &kp A   &kp S   &kp D      &kp F    &kp G                    &kp H       &kp J      &kp K       &kp L     &kp SEMI   &mt LALT APOSTROPHE
-                        &mt LSHFT LPAR   &kp Z   &kp X   &kp C      &kp V    &kp B                    &kp N       &kp M      &kp COMMA   &kp DOT   &kp FSLH   &mt LSHFT RPAR  
+                        &kp LSHFT   &kp Z   &kp X   &kp C      &kp V    &kp B                    &kp N       &kp M      &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT  
                                                  &lt _NUM GRAVE     &lt _NAV ENTER   &mt LGUI ESC     &kp SPACE   &lt _SYM DEL
                         >;
                 };
@@ -106,7 +106,7 @@ keymap {
                         // | | BOOT  | | F1  | | F2  | | F3  | | F4  | | BT0 |                |     | |PG_UP| | UP  | |LTAB | |RTAB | | BCK | |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -----  |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -----  |
-                        // | |  DEL  | | F5  | | F6  | | F7  | | F8  | | BT1 |                |HOME | |LEFT | |DOWN | |RIGHT| | END | | BT3 | |
+                        // | | LCTRL | | F5  | | F6  | | F7  | | F8  | | BT1 |                |HOME | |LEFT | |DOWN | |RIGHT| | END | | BT3 | |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -----  |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -----  |
                         // | |       | | F9  | | F10 | | F1l | | F12 | | BT2 |                |     | |PG_DN| |     | |     | |     | | BT4 | |
@@ -117,7 +117,7 @@ keymap {
                         // --------------------------------------------------------------------------------------------------------------------
                         
                         &bootloader  &kp F1   &kp F2    &kp F3    &kp F4    &bt BT_SEL 0              &none      &kp PG_UP   &kp UP     &kp LS(LG(LEFT))  &kp LS(LG(RIGHT))  &trans
-                        &kp DELETE   &kp F5   &kp F6    &kp F7    &kp F8    &bt BT_SEL 1              &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT         &kp END            &bt BT_SEL 3
+                        &kp LCTRL    &kp F5   &kp F6    &kp F7    &kp F8    &bt BT_SEL 1              &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT         &kp END            &bt BT_SEL 3
                         &none        &kp F9   &kp F10   &kp F11   &kp F12   &bt BT_SEL 2              &none      &kp PG_DN   &none      &none             &none              &bt BT_SEL 4
                                                                   &bt BT_CLR     &none     &none     &trans     &none
                         >;
