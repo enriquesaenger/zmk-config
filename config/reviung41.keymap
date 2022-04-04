@@ -24,7 +24,7 @@
 };
 
 / {
-behaviors {
+macros {
 	kenobi: kenobi {
 		compatible = "zmk,behavior-macro";
 		label = "KENOBI";
