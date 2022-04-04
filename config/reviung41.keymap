@@ -14,22 +14,6 @@
 #define _SYM 2
 #define _NAV 3
 
-/ {
-    macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp I>
-                , <&macro_release &kp LSHFT>
-		, <&macro_tap &kp H &kp A &kp V &kp E &kp T &kp H &kp E &kp H &kp I &kp G &kp H &kp G &kp R &kp O &kp U &kp N &kp D &kp !>
-                ;
-        };
-    };
-};
-
 &mt {
         tapping-term-ms = <200>;
         quick-tap-ms = <200>;
