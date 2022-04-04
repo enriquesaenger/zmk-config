@@ -33,6 +33,7 @@ macros {
 			= <&macro_press &kp LSHFT>
                 	, <&macro_tap &kp I>
                 	, <&macro_release &kp LSHFT>
+                        , <&kp H>
                 	;
 		};
 	};
