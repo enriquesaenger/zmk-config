@@ -114,10 +114,10 @@ keymap {
                         // |                                    -----   -----       ----       -----   -----                                    |
                         // ----------------------------------------------------------------------------------------------------------------------
                         
-                        &kp TILDE    &kp EXCL    &kp AT      &kp HASH   &kp DLLR   &kp PRCNT           &kp CARET   &kp AMPS    &kp STAR    &kp LPAR   &kp RPAR   &trans
-                        &kp DELETE   &kp UNDER   &kp EQUAL   &kp LBRC   &kp RBRC   &kp PIPE            &none       &kp MINUS   &kp EQUAL   &kp LBRC   &kp RBRC   &none
-                        &kp LBRC     &none       &none       &kp LPAR   &kp RPAR   &none               &none       &kp UNDER   &kp PLUS    &kp LBKT   &kp RBKT   &kp RBRC
-                                                                        &reset     &none       &CAPS   &trans      &none 
+                        &kp TILDE    &kp EXCL    &kp AT      &kp HASH   &kp DLLR   &kp PRCNT              &kp CARET   &kp AMPS    &kp STAR    &kp LPAR   &kp RPAR   &trans
+                        &kp DELETE   &kp UNDER   &kp EQUAL   &kp LBRC   &kp RBRC   &kp PIPE               &none       &kp MINUS   &kp EQUAL   &kp LBRC   &kp RBRC   &none
+                        &kp LBRC     &none       &none       &kp LPAR   &kp RPAR   &none                  &none       &kp UNDER   &kp PLUS    &kp LBKT   &kp RBKT   &kp RBRC
+                                                                        &reset     &none       &kp CAPS   &trans      &none 
                         >;         
                 };
 
