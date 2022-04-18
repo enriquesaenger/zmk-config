@@ -91,9 +91,9 @@ keymap {
                         // |                            ----------   ----------      ---------      -------   ----------                             |
                         // ---------------------------------------------------------------------------------------------------------------------------
 
-                        &mt LALT TAB   &kp Q   &kp W   &kp E   &kp R          &kp T                           &kp Y       &kp U          &kp I       &kp O     &kp P      &kp BACKSPACE
-                        &sk LCTRL      &kp A   &kp S   &kp D   &kp F          &kp G                           &kp H       &kp J          &kp K       &kp L     &kp SEMI   &kp APOSTROPHE
-                        &td0           &kp Z   &kp X   &kp C   &kp V          &kp B                           &kp N       &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
+                        &none   &kp Q   &kp W   &kp E   &kp R          &kp T                           &kp Y       &kp U          &kp I       &kp O     &kp P      &kp BACKSPACE
+                        &none      &kp A   &kp S   &kp D   &kp F          &kp G                           &kp H       &kp J          &kp K       &kp L     &kp SEMI   &kp APOSTROPHE
+                        &none           &kp Z   &kp X   &kp C   &kp V          &kp B                           &kp N       &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
                                                                &lt _NUM TAB   &lt _NAV ENTER   &mt LGUI ESC   &kp SPACE   &lt _SYM DEL
                         >;
                 };
