@@ -188,7 +188,7 @@ keymap {
                         
                         &bootloader   &kp F1   &kp F2    &kp F3    &kp F4       &bt BT_SEL 0                &kp C_VOL_UP   &kp PG_UP   &kp UP     &kp LS(LG(LEFT))   &kp LS(LG(RIGHT))   &trans
                         &kp LCTRL     &kp F5   &kp F6    &kp F7    &kp F8       &bt BT_SEL 1                &kp HOME       &kp LEFT    &kp DOWN   &kp RIGHT          &kp END             &bt BT_SEL 3
-                        &kp LSHFT     &kp F9   &kp F10   &kp F11   &kp F12      &bt BT_SEL 2                &kp C_VOL_DN   &kp PG_DN   &m0        &kp LG(LBKT)       &kp LG(RBKT)        &bt BT_SEL 4
+                        &kp LSHFT     &kp F9   &kp F10   &kp F11   &kp F12      &bt BT_SEL 2                &kp C_VOL_DN   &kp PG_DN   &none      &kp LG(LBKT)       &kp LG(RBKT)        &bt BT_SEL 4
                                                                    &bt BT_CLR   &none          &kp C_MUTE   &trans         &kp DEL
                         >;
                 };
