@@ -64,14 +64,14 @@ keymap {
                         // | |SHFTCAPS | |  Z  | |  X  | |  C  | |  V  | |  B  |                   |  K  | |  M  | |  ,  | |  .  | |  /  | | RSHFT |  |
                         // |  ---------   -----   -----   -----   -----   -----                     -----   -----   -----   -----   -----   -------   |
                         // |                            ----------   ----------      ---------      --------   ----------                             |
-                        // |                           | _MED/ESC | | _NAV/BSCP|    | _SYM/ENT|    |_NUM/SPC| | _FUN/DEL |                            |
+                        // |                           | _MED/ESC | | _NAV/SPC|    | _SYM/ENT|    |_NUM/BSPC| | _FUN/DEL |                            |
                         // |                            ----------   ----------      ---------      --------   ----------                             |
                         // ----------------------------------------------------------------------------------------------------------------------------
 
-                        &sk LALT    &kp Q   &kp W   &kp F   &kp P          &kp G                                 &kp J       &kp L          &kp U       &kp Y     &kp SEMI   &sk LGUI
-                        &sk LCTRL   &kp A   &kp R   &kp S   &kp T          &kp D                                 &kp H       &kp N          &kp E       &kp I     &kp O      &kp APOSTROPHE
-                        &td0        &kp Z   &kp X   &kp C   &kp V          &kp B                                 &kp K       &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
-                                                            &lt _MED ESC   &lt _NAV BACKSPACE   &lt _SYM ENTER   &lt _NUM SPACE   &lt _FUN DEL
+                        &sk LALT    &kp Q   &kp W   &kp F   &kp P          &kp G                             &kp J       &kp L          &kp U       &kp Y     &kp SEMI   &sk LGUI
+                        &sk LCTRL   &kp A   &kp R   &kp S   &kp T          &kp D                             &kp H       &kp N          &kp E       &kp I     &kp O      &kp APOSTROPHE
+                        &td0        &kp Z   &kp X   &kp C   &kp V          &kp B                             &kp K       &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
+                                                            &lt _MED ESC   &lt _NAV SPACE   &lt _SYM ENTER   &lt _NUM BSPC   &lt _FUN DEL
                         >;
                 };
         media_layer {
