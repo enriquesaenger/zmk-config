@@ -36,7 +36,7 @@
                 };
         };
 macros {
-	CUT: macro_0 {
+	m0: macro_0 {
 	        compatible = "zmk,behavior-macro";
 		label = "CUT";
 		#binding-cells = <0>;
@@ -44,6 +44,7 @@ macros {
 			= <&macro_press &kp LCTRL>
                 	, <&macro_tap &kp X>
                 	, <&macro_release &kp LCTRL>
+                        ;
 		};
 	};
 keymap {
