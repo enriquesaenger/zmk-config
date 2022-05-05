@@ -9,10 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define _DEF 0
-#define _QWE 1
-#define _NUM 2
-#define _SYM 3
-#define _NAV 4
+#define _NUM 1
+#define _SYM 2
+#define _NAV 3
 
 &mt {
         tapping-term-ms = <200>;
@@ -52,6 +51,7 @@ keymap {
         compatible = "zmk,keymap";
         default_layer {                      					  
                 bindings = <
+<<<<<<< HEAD
 			// ---------------------------------------------------------------------------------------------------------------------------
                         // |  ---------   -----   -----   -----   -----   -----                     -----   -----   -----   -----   -----   -------  |
                         // | | ALT TAB | |  Q  | |  W  | |  F  | |  P  | |  G  |                   |  J  | |  L  | |  U  | |  Y  | |  ;  | |  BCK  | |
@@ -75,6 +75,8 @@ keymap {
                 };
         qwerty_layer {
                 bindings = <
+=======
+>>>>>>> parent of ec0e1ca (Merge pull request #1 from enriquesaenger/Colemak)
                         // ---------------------------------------------------------------------------------------------------------------------------
                         // |  ---------   -----   -----   -----   -----   -----                     -----   -----   -----   -----   -----   -------  |
                         // | | ALT TAB | |  Q  | |  W  | |  E  | |  R  | |  T  |                   |  Y  | |  U  | |  I  | |  O  | |  P  | |  BCK  | |
@@ -96,6 +98,7 @@ keymap {
                                                                &lt _NUM TAB   &lt _NAV ENTER   &mt LGUI ESC   &kp SPACE   &lt _SYM DEL
                         >;
                 };
+
         number_layer {
 		bindings = < 
                         // ----------------------------------------------------------------------------------------------------------------------
@@ -103,7 +106,7 @@ keymap {
                         // | | GRAVE | |  1  | |  2  | |  3  | |  4  | |  5  |                |  6  | |  7  | |  8  | |  9  | |  0  | |  BCK  | |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
-                        // | |  DEL  | |  -  | |  +  | |  [  | |  ]  | |  |  |                |     | |  4  | |  5  | |  6  | | _DEF| | _QWE  | |
+                        // | |  DEL  | |  -  | |  +  | |  [  | |  ]  | |  |  |                |     | |  4  | |  5  | |  6  | |     | |       | |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
                         // |  -------   -----   -----   -----   -----   -----                  -----   -----   -----   -----   -----   -------  |
                         // | |   [   | |     | |     | |     | |     | |     |                |     | |  1  | |  2  | |  3  | |  \  | |   ]   | |
@@ -114,7 +117,7 @@ keymap {
                         // ----------------------------------------------------------------------------------------------------------------------
 
                         &kp GRAVE    &kp N1      &kp N2     &kp N3     &kp N4     &kp N5             &kp N6   &kp N7   &kp N8   &kp N9   &kp N0     &trans
-                        &kp DELETE   &kp MINUS   &kp PLUS   &kp LBKT   &kp RBKT   &kp PIPE           &none    &kp N4   &kp N5   &kp N6   &to 0      &to 1
+                        &kp DELETE   &kp MINUS   &kp PLUS   &kp LBKT   &kp RBKT   &kp PIPE           &none    &kp N4   &kp N5   &kp N6   &none      &none
                         &kp LBKT     &none       &none      &none      &none      &none              &none    &kp N1   &kp N2   &kp N3   &kp BSLH   &kp RBKT      
                                                                        &none      &none      &none   &trans   &kp N0
                         >;
