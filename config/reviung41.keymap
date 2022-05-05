@@ -36,12 +36,7 @@
                 };
         };
 macros {
-	ZMK_MACRO(my_macro,
-                wait-ms = <30>;
-                tap-ms = <40>;
-                bindings = <&kp Z &kp M &kp K>;
-        )
-        ZMK_MACRO(my_macro,
+	ZMK_MACRO(CUT,
                 wait-ms = <30>;
                 tap-ms = <40>;
                 bindings = <&kp Z &kp M &kp K>;
