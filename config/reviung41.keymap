@@ -36,17 +36,12 @@
                 };
         };
 macros {
-	CUT: CUT {
-	        compatible = "zmk,behavior-macro";
-		label = "CUT";
-		#binding-cells = <0>;
-		bindings
-			= <&macro_press &kp LCTRL>
-                	, <&macro_tap &kp X>
-                	, <&macro_release &kp LCTRL>
-                        ;
-		};
-	};
+	ZMK_MACRO(my_macro,
+                wait-ms = <30>;
+                tap-ms = <40>;
+                bindings = <&kp Z &kp M &kp K>;
+                )
+        };
 keymap {
         compatible = "zmk,keymap";
         default_layer {                      					  
