@@ -36,11 +36,16 @@
                 };
         };
 macros {
-	ZMK_MACRO(my_macro,
-                wait-ms = <30>;
-                tap-ms = <40>;
-                bindings = <&kp Z &kp M &kp K>;
-                )
+	m0: macro_0 {
+	        compatible = "zmk,behavior-macro";
+		label = "CUT";
+		#binding-cells = <0>;
+		bindings
+			= <&macro_press &kp LCTRL>
+                	, <&macro_tap &kp X>
+                	, <&macro_release &kp LCTRL>
+                        ;
+		};
 	};
 keymap {
         compatible = "zmk,keymap";
