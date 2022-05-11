@@ -36,7 +36,7 @@
                 };
         };
 macros {
-	m0: macro_0 {
+	cut: cut {
 	        compatible = "zmk,behavior-macro";
 		label = "CUT";
 		#binding-cells = <0>;
