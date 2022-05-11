@@ -46,6 +46,16 @@ macros {
                 	, <&macro_release &kp LCTRL>
                         ;
 		};
+        m1: macro_1 {
+	        compatible = "zmk,behavior-macro";
+		label = "COPY";
+		#binding-cells = <0>;
+		bindings
+			= <&macro_press &kp LCTRL>
+                	, <&macro_tap &kp C>
+                	, <&macro_release &kp LCTRL>
+                        ;
+		};
 	};
 keymap {
         compatible = "zmk,keymap";
