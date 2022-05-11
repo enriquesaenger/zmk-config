@@ -106,9 +106,9 @@ keymap {
                         // |                                --------   --------     --------     ---------   --------                              |
                         // -------------------------------------------------------------------------------------------------------------------------
 
-                        &sk LALT    &kp Q   &kp W   &kp F   &kp P          &kp G                             &kp J       &kp L          &kp U       &kp Y     &kp SEMI   &sk LGUI
-                        &sk LCTRL   &kp A   &kp R   &kp S   &kp T          &kp D                             &kp H       &kp N          &kp E       &kp I     &kp O      &kp APOSTROPHE
-                        &td0        &kp Z   &kp X   &kp C   &kp V          &kp B                             &kp K       &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
+                        &sk LALT    &kp Q   &kp W   &kp F   &kp P          &kp G                             &kp J           &kp L          &kp U       &kp Y     &kp SEMI   &sk LGUI
+                        &sk LCTRL   &kp A   &kp R   &kp S   &kp T          &kp D                             &kp H           &kp N          &kp E       &kp I     &kp O      &kp APOSTROPHE
+                        &td0        &kp Z   &kp X   &kp C   &kp V          &kp B                             &kp K           &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
                                                             &lt _MED ESC   &lt _NAV SPACE   &lt _SYM ENTER   &lt _NUM BSPC   &lt _FUN DEL
                         >;
                 };
@@ -129,9 +129,9 @@ keymap {
                         // |                                 ------   -----     -----     ------------   ------                             |
                         // ------------------------------------------------------------------------------------------------------------------
 
-                        &none   &none   &none   &none   &none    &none           &none   &none        &kp C_VOL_UP   &none        &none   &none
-                        &none   &none   &none   &none   &none    &none           &none   &kp C_PREV   &kp C_VOL_DN   &kp C_NEXT   &none   &none
-                        &none   &none   &none   &none   &none    &none           &none   &none        &none          &none        &none   &none
+                        &none   &none   &none   &none   &none    &none           &none      &none        &kp C_VOL_UP   &none        &none   &none
+                        &none   &none   &none   &none   &none    &none           &none      &kp C_PREV   &kp C_VOL_DN   &kp C_NEXT   &none   &none
+                        &none   &none   &none   &none   &none    &none           &none      &none        &none          &none        &none   &none
                                                         &trans   &none   &none   &kp C_PP   &kp C_MUTE
                         >;
                 };
