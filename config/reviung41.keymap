@@ -44,8 +44,6 @@ macros {
 			= <&macro_press &kp LSHFT>
                 	, <&macro_tap &kp I>
                 	, <&macro_release &kp LSHFT>
-                        , <&macro_tap &kp H &kp A &kp V &kp E &kp T &kp H &kp E &kp H &kp I &kp G &kp H &kp G &kp R &kp O &kp U &kp N &kp D &kp EXCL>
-                        , <&macro_tap &kp ENTER>
                 	;
 		};
 	};
@@ -68,10 +66,10 @@ keymap {
                         // |                                --------   --------     --------     ---------   --------                              |
                         // -------------------------------------------------------------------------------------------------------------------------
 
-                        &sk LALT    &kp Q   &kp W   &kp F   &kp P          &kp G                             &kp J       &kp L          &kp U       &kp Y     &kp SEMI   &sk LGUI
-                        &sk LCTRL   &kp A   &kp R   &kp S   &kp T          &kp D                             &kp H       &kp N          &kp E       &kp I     &kp O      &kp APOSTROPHE
-                        &td0        &kp Z   &kp X   &kp C   &kp V          &kp B                             &kp K       &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
-                                                            &lt _MED ESC   &lt _NAV SPACE   &lt _SYM ENTER   &lt _NUM BSPC   &lt _FUN DEL
+                        &kp TAB    &kp Q   &kp W   &kp F   &kp P     &kp G                       &kp J            &kp L          &kp U       &kp Y     &kp SEMI   &sk LGUI
+                        &kp BSCP   &kp A   &kp R   &kp S   &kp T     &kp D                       &kp H            &kp N          &kp E       &kp I     &kp O      &kp APOSTROPHE
+                        &td0       &kp Z   &kp X   &kp C   &kp V     &kp B                       &kp K            &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
+                                                           &kp GUI   &mo _NUM   &mt LALT SPACE   &lt _SYM ENTER   &lt _FUN DEL
                         >;
                 };
         media_layer {
