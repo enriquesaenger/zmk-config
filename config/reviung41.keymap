@@ -25,7 +25,7 @@
 };
 
 / {
-    behaviors {
+behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "LSHIFT_CAPS_WORD";
@@ -46,6 +46,13 @@ macros {
                 	;
 		};
 	};
+conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+            };
+        };
 keymap {
         compatible = "zmk,keymap";
         default_layer {                      					  
