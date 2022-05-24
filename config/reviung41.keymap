@@ -67,15 +67,15 @@ keymap {
                         // |  --------   -----   -----   -----   -----   -----                   -----   -----   -----   -----   -----   -------   |
                         // | |SHFTCAPS| |  Z  | |  X  | |  C  | |  V  | |  B  |                 |  K  | |  M  | |  ,  | |  .  | |  /  | | RSHFT |  |
                         // |  --------   -----   -----   -----   -----   -----                   -----   -----   -----   -----   -----   -------   |
-                        // |                                    -----   ------     ---------     ----------   ----------                              |
-                        // |                                   | GUI | | _NUM |   | ALT/SPC |   | _SYM/ENT | | _FUN/DEL |                             |
-                        // |                                    -----   ------     ---------     ----------   ----------                              |
+                        // |                                -----   ----------     ---------     ----------   ----------                              |
+                        // |                               | GUI | | _NUM/SPC |   | ALT/SPC |   | _SYM/ENT | | _FUN/DEL |                             |
+                        // |                                -----   ----------     ---------     ----------   ----------                              |
                         // -------------------------------------------------------------------------------------------------------------------------
 
                         &kp TAB    &kp Q   &kp W   &kp F   &kp P      &kp G                       &kp J            &kp L          &kp U       &kp Y     &kp SEMI   &kp BSLH
                         &kp BSPC   &kp A   &kp R   &kp S   &kp T      &kp D                       &kp H            &kp N          &kp E       &kp I     &kp O      &kp APOSTROPHE
                         &td0       &kp Z   &kp X   &kp C   &kp V      &kp B                       &kp K            &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
-                                                           &kp LGUI   &mo _NUM   &mt LALT SPACE   &lt _SYM ENTER   &lt _FUN DEL
+                                                           &kp LALT   &lt _NUM SPACE   &kp LGUI   &lt _SYM ENTER   &lt _FUN DEL
                         >;
                 };
 
