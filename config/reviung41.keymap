@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define _DEF 0
 #define _NUM 1
@@ -15,164 +15,98 @@
 #define _FUN 4
 
 &mt {
-        tapping-term-ms = <200>;
-        quick-tap-ms = <200>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
 };
 
 &lt {
-        tapping-term-ms = <150>;
-        quick-tap-ms = <0>;
+    tapping-term-ms = <150>;
+    quick-tap-ms = <0>;
 };
 
 / {
-behaviors {
+    behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "LSHIFT_CAPS_WORD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSHFT>, <&caps_word>;
-                };
+            bindings =
+                <&kp LSHFT>,
+                <&caps_word>;
         };
-macros {
-	m0: macro_0 {
-	        compatible = "zmk,behavior-macro";
-		label = "KENOBI";
-		#binding-cells = <0>;
-		bindings
-			= <&macro_press &kp LSHFT>
-                	, <&macro_tap &kp I>
-                	, <&macro_release &kp LSHFT>
-                	;
-		};
-	};
-conditional_layers {
+    };
+
+    macros {
+        m0: macro_0 {
+            compatible = "zmk,behavior-macro";
+            label = "KENOBI";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp I>,
+                <&macro_release>,
+                <&kp LSHFT>;
+        };
+    };
+
+    conditional_layers {
         compatible = "zmk,conditional-layers";
+
         tri_layer {
             if-layers = <1 2>;
             then-layer = <3>;
-            };
         };
-keymap {
-        compatible = "zmk,keymap";
-        default_layer {                      					  
-                bindings = <
-		        // -------------------------------------------------------------------------------------------------------------------------
-                        // |  --------   -----   -----   -----   -----   -----                   -----   -----   -----   -----   -----   -------   |
-                        // | |  TAB   | |  Q  | |  W  | |  F  | |  P  | |  G  |                 |  J  | |  L  | |  U  | |  Y  | |  ;  | |  BCK  |  |
-                        // |  --------   -----   -----   -----   -----   -----                   -----   -----   -----   -----   -----   -------   |
-                        // |  --------   -----   -----   -----   -----   -----                   -----   -----   -----   -----   -----   -------   |
-                        // | |  BSPC  | |  A  | |  R  | |  S  | |  T  | |  D  |                 |  H  | |  N  | |  E  | |  I  | |  O  | |   '   |  |
-                        // |  --------   -----   -----   -----   -----   -----                   -----   -----   -----   -----   -----   -------   |
-                        // |  --------   -----   -----   -----   -----   -----                   -----   -----   -----   -----   -----   -------   |
-                        // | |SHFTCAPS| |  Z  | |  X  | |  C  | |  V  | |  B  |                 |  K  | |  M  | |  ,  | |  .  | |  /  | | RSHFT |  |
-                        // |  --------   -----   -----   -----   -----   -----                   -----   -----   -----   -----   -----   -------   |
-                        // |                                -----   ----------     ---------     ----------   ----------                              |
-                        // |                               | GUI | | _NUM/SPC |   | ALT/SPC |   | _SYM/ENT | | _FUN/DEL |                             |
-                        // |                                -----   ----------     ---------     ----------   ----------                              |
-                        // -------------------------------------------------------------------------------------------------------------------------
+    };
 
-                        &kp TAB    &kp Q   &kp W   &kp F   &kp P      &kp G                       &kp J            &kp L          &kp U       &kp Y     &kp SEMI   &kp BSLH
-                        &kp BSPC   &kp A   &kp R   &kp S   &kp T      &kp D                       &kp H            &kp N          &kp E       &kp I     &kp O      &kp APOSTROPHE
-                        &td0       &kp Z   &kp X   &kp C   &kp V      &kp B                       &kp K            &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
-                                                           &kp LALT   &lt _NUM SPACE   &kp LGUI   &lt _SYM ENTER   &lt _FUN DEL
-                        >;
-                };
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+&kp TAB         &kp Q  &kp W  &kp F             &kp P           &kp G            &kp BACKSPACE  &kp L           &kp U         &kp Y    &kp SEMI  &kp BSLH
+&kp LEFT_SHIFT  &kp A  &kp R  &kp S             &kp T           &kp D            &kp H          &kp N           &kp E         &kp I    &kp O     &kp APOSTROPHE
+&td0            &kp Z  &kp X  &kp C             &kp V           &kp B            &kp K          &kp M           &kp COMMA     &kp DOT  &kp FSLH  &kp RSHIFT
+                              &kp LEFT_COMMAND  &lt _NUM SPACE         &kp LGUI                 &lt _SYM ENTER  &lt _FUN DEL
+            >;
+        };
 
         number_layer {
-		bindings = < 
-                        // -----------------------------------------------------------------------------------------------------------------------
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // | | BOOT  | | F1  | | F2  | | F3  | | F4  | | BT0 |                | VOLUP | |PG_UP| |  UP  | |LTAB | |RTAB | | BCK | |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // | | LCTRL | | F5  | | F6  | | F7  | | F8  | | BT1 |                | HOME  | |LEFT | | DOWN | |RIGHT| | END | | BT3 | |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // | | LSHFT | | F9  | | F10 | | F1l | | F12 | | BT2 |                |VOLDOWN| |PG_DN| |KENOBI| |BACK | |FRWRD| | BT4 | |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // |                                    -----   -----      ------      -------   -----                                   |
-                        // |                                   |BT_CR| | LYR |    | MUTE |    |  SPC  | | DEL |                                  |
-                        // |                                    -----   -----      ------      -------   -----                                   |
-                        // ----------------------------------------------------------------------------------------------------------------------- 
-                        
-                        &kp GRAVE   &none   &kp N7   &kp N8   &kp N9   &none             &none    &kp LG(C)   &kp UP     &kp LG(V)   &none   &none
-                        &trans      &none   &kp N4   &kp N5   &kp N6   &none             &none    &kp LEFT    &kp DOWN   &kp RIGHT   &none   &none
-                        &trans      &none   &kp N1   &kp N2   &kp N3   &kp N0            &none    &none       &none      &none       &none   &none
-                                                              &trans   &trans   &trans   &trans   &trans
-                        >;
-                };
+            bindings = <
+&kp GRAVE  &none  &kp N7  &kp N8  &kp N9  &none           &none  &kp LG(C)  &kp UP    &kp LG(V)  &none  &none
+&trans     &none  &kp N4  &kp N5  &kp N6  &none           &none  &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
+&trans     &none  &kp N1  &kp N2  &kp N3  &kp N0          &none  &none      &none     &none      &none  &none
+                          &trans  &trans          &trans         &trans     &trans
+            >;
+        };
 
         symbol_layer {
-		bindings = < 
-                        // ----------------------------------------------------------------------------------------------------------------
-                        // |  -----   -----   -----   -----   -----   -----                -----   -----   -----   -----   -----   -----  |
-                        // | |  ~  | |  {  | |  &  | |  *  | |  (  | |  }  |              | N/A | | N/A | | N/A | | N/A | | N/A | | N/A | |
-                        // |  -----   -----   -----   -----   -----   -----                -----   -----   -----   -----   -----   -----  |
-                        // |  -----   -----   -----   -----   -----   -----                -----   -----   -----   -----   -----   -----  |
-                        // | | N/A | |  _  | |  $  | |  %  | |  ^  | |  +  |              | N/A | | N/A | | N/A | | N/A | | N/A | | N/A | |
-                        // |  -----   -----   -----   -----   -----   -----                -----   -----   -----   -----   -----   -----  |
-                        // |  -----   -----   -----   -----   -----   -----                -----   -----   -----   -----   -----   -----  |
-                        // | | N/A | | N/A | |  !  | |  @  | |  #  | |  |  |              | N/A | | N/A | | N/A | | N/A | | N/A | | N/A | |
-                        // |  -----   -----   -----   -----   -----   -----                -----   -----   -----   -----   -----   -----  |
-                        // |                                  -----   -----     ------     -----   -----                                  |
-                        // |                                 |  (  | |  )  |   | TRNS |   | N/A | | N/A |                                 |
-                        // |                                  -----   -----     ------     -----   -----                                  |
-                        // ----------------------------------------------------------------------------------------------------------------
-                        
-                        &kp TILDE   &none   &kp AMPS   &kp STAR    &none       &none             &none   &kp LPAR    &kp RPAR    &kp LBKT   &kp RBKT   &none
-                        &none       &none   &kp DLLR   &kp PRCNT   &kp CARET   &none             &none   &kp MINUS   &kp EQUAL   &kp LBRC   &kp RBRC   &none
-                        &none       &none   &kp EXCL   &kp AT      &kp HASH    &none             &none   &kp UNDER   &kp PLUS    &none      &none      &none
-                                                                   &trans      &trans   &trans   &trans  &trans 
-                        >;         
-                };
+            bindings = <
+&kp TILDE  &none  &kp AMPS  &kp STAR   &none      &none          &none  &kp LPAR   &kp RPAR   &kp LBKT  &kp RBKT  &none
+&none      &none  &kp DLLR  &kp PRCNT  &kp CARET  &none          &none  &kp MINUS  &kp EQUAL  &kp LBRC  &kp RBRC  &none
+&none      &none  &kp EXCL  &kp AT     &kp HASH   &none          &none  &kp UNDER  &kp PLUS   &none     &none     &none
+                            &trans     &trans            &trans         &trans     &trans
+            >;
+        };
 
         combo_layer {
-                bindings = <
-                        // ------------------------------------------------------------------------------------------------------------------
-                        // |  -----   -----   -----   -----   -----   -----               -----   ------   ------   ------   -----   -----  |
-                        // | | N/A | | N/A | | N/A | | N/A | | N/A | | N/A |             | N/A | | N/A  | | VOLU | | N/A  | | N/A | | N/A | |
-                        // |  -----   -----   -----   -----   -----   -----               -----   ------   ------   ------   -----   -----  |
-                        // |  -----   -----   -----   -----   -----   -----               -----   ------   ------   ------   -----   -----  |
-                        // | | N/A | | N/A | | N/A | | N/A | | N/A | | N/A |             | N/A | | PREV | | VOLD | | NEXT | | N/A | | N/A | |
-                        // |  -----   -----   -----   -----   -----   -----               -----   -----   -------   ------   -----   -----  |
-                        // |  -----   -----   -----   -----   -----   -----               -----   ------   ------   ------   -----   -----  |
-                        // | | N/A | | N/A | | N/A | | N/A | | N/A | | N/A |             | N/A | | N/A  | | N/A  | | N/A  | | N/A | | N/A | |
-                        // |  -----   -----   -----   -----   -----   -----               -----   ------   ------   ------   -----   -----  |
-                        // |                                 ------   -----     -----     ------------   ------                             |
-                        // |                                | TRNS | | N/A |   | N/A |   | PLAY/PAUSE | | MUTE |                            |
-                        // |                                 ------   -----     -----     ------------   ------                             |
-                        // ------------------------------------------------------------------------------------------------------------------
+            bindings = <
+&bootloader  &none  &none         &none         &none         &none          &bt BT_CLR  &none   &none   &none  &none  &none
+&none        &none  &bt BT_SEL 3  &bt BT_SEL 4  &reset        &none          &none       &none   &none   &none  &none  &none
+&none        &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none          &none       &none   &none   &none  &none  &none
+                                  &trans        &trans               &trans              &trans  &trans
+            >;
+        };
 
-                        &bootloader   &none   &none          &none          &none          &none             &bt BT_CLR   &none    &none   &none   &none   &none
-                        &none         &none   &bt BT_SEL 3   &bt BT_SEL 4   &reset         &none             &none        &none    &none   &none   &none   &none
-                        &none         &none   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none             &none        &none    &none   &none   &none   &none
-                                                                            &trans         &trans   &trans   &trans       &trans
-                        >;
-                };
-		
-	fun_layer {
-		bindings = < 
-                        // -----------------------------------------------------------------------------------------------------------------------
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // | | BOOT  | | F1  | | F2  | | F3  | | F4  | | BT0 |                | VOLUP | |PG_UP| |  UP  | |LTAB | |RTAB | | BCK | |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // | | LCTRL | | F5  | | F6  | | F7  | | F8  | | BT1 |                | HOME  | |LEFT | | DOWN | |RIGHT| | END | | BT3 | |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // | | LSHFT | | F9  | | F10 | | F1l | | F12 | | BT2 |                |VOLDOWN| |PG_DN| |KENOBI| |BACK | |FRWRD| | BT4 | |
-                        // |  -------   -----   -----   -----   -----   -----                  -------   -----   ------   -----   -----   -----  |
-                        // |                                    -----   -----      ------      -------   -----                                   |
-                        // |                                   |BT_CR| | LYR |    | MUTE |    |  SPC  | | DEL |                                  |
-                        // |                                    -----   -----      ------      -------   -----                                   |
-                        // ----------------------------------------------------------------------------------------------------------------------- 
-                        
-                        &kp ESC   &none   &kp F7   &kp F8   &kp F9   &kp F12            &none   &none          &kp LC(UP)     &none           &none   &none
-                        &none     &none   &kp F4   &kp F5   &kp F6   &kp F11            &none   &kp LC(LEFT)   &kp LC(DOWN)   &kp LC(RIGHT)   &none   &none
-                        &none     &none   &kp F1   &kp F2   &kp F3   &kp F10            &none   &none          &none          &none           &none   &none
-                                                          &trans   &trans    &trans   &trans  &trans
-                        >;
-                };
-};
+        fun_layer {
+            bindings = <
+&kp ESC  &none  &kp F7  &kp F8  &kp F9  &kp F12          &none  &none         &kp LC(UP)    &none          &none  &none
+&none    &none  &kp F4  &kp F5  &kp F6  &kp F11          &none  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &none  &none
+&none    &none  &kp F1  &kp F2  &kp F3  &kp F10          &none  &none         &none         &none          &none  &none
+                        &trans  &trans           &trans         &trans        &trans
+            >;
+        };
+    };
 };
