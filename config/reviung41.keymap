@@ -57,7 +57,7 @@
 
         tri_layer {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <5>;
         };
     };
 
@@ -66,10 +66,10 @@
 
         default_layer {
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp F             &kp P           &kp G                     &kp BACKSPACE  &kp A           &kp R         &kp S    &kp T          &kp D
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V           &kp B                     &kp J          &kp L           &kp U         &kp Y    &kp SEMICOLON  &kp BACKSLASH
-&kp H           &kp N  &kp E  &kp I             &kp O           &kp APOSTROPHE            &kp K          &kp M           &kp COMMA     &kp DOT  &kp FSLH       &kp RSHIFT
-                              &kp LEFT_COMMAND  &lt _NUM SPACE                  &kp LGUI                 &lt _SYM ENTER  &kp LEFT_ALT
+&kp TAB         &kp Q  &kp W  &kp F             &kp P        &kp G                     &kp BACKSPACE  &kp A        &kp R         &kp S    &kp T          &kp D
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V        &kp B                     &kp J          &kp L        &kp U         &kp Y    &kp SEMICOLON  &kp BACKSLASH
+&kp H           &kp N  &kp E  &kp I             &kp O        &kp APOSTROPHE            &kp K          &kp M        &kp COMMA     &kp DOT  &kp FSLH       &kp RSHIFT
+                              &kp LEFT_COMMAND  &lt 1 SPACE                  &kp LGUI                 &lt 2 ENTER  &kp LEFT_ALT
             >;
         };
 
@@ -88,6 +88,15 @@
 &kp CAPSLOCK           &none      &kp EXCLAMATION  &kp AT_SIGN   &kp POUND  &kp LEFT_BRACE            &kp RIGHT_BRACKET  &none      &none       &none        &none      &none
 &kp RIGHT_PARENTHESIS  &kp MINUS  &kp EQUAL        &none         &none      &none                     &kp RIGHT_BRACE    &kp UNDER  &kp PLUS    &none        &none      &none
                                                    &trans        &trans                       &trans                     &trans     &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans          &trans          &trans  &trans
             >;
         };
 
